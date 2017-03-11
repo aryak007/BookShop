@@ -10,9 +10,14 @@ DEBUG = os.environ.get('DEBUG', 'true') != 'false'
 SQL_DEBUG = DEBUG
 
 ALLOWED_HOSTS = [
-    'latest.oscarcommerce.com',
-    'master.oscarcommerce.com',
-    'localhost',
+    'aryaks-macbook-pro.local',
+    '127.0.0.1',
+    '192.168.43.110'
+    #'127.0.0.1:8000'
+    #'latest.oscarcommerce.com',
+    #'master.oscarcommerce.com',
+    #'localhost',
+    #'127.0.0.1:8000'
 ]
 
 # This is needed for the hosted version of the sandbox
@@ -342,7 +347,7 @@ from oscar.defaults import *
 # Meta
 # ====
 
-OSCAR_SHOP_TAGLINE = 'Sandbox'
+OSCAR_SHOP_TAGLINE = "Find all books here"
 
 OSCAR_RECENTLY_VIEWED_PRODUCTS = 20
 OSCAR_ALLOW_ANON_CHECKOUT = True
@@ -417,3 +422,6 @@ try:
     from settings_local import *
 except ImportError:
     pass
+
+OSCAR_SHOP_NAME="Dey's Publishing house"
+OSCAR_DEFAULT_CURRENCY = 'INR' 
